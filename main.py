@@ -12,3 +12,11 @@ spark = SparkSession.builder.appName('firstSeesion')\
    .config("spark.executor.memory", "2gb") \
    .config('spark.shuffle.sql.partitions', 2)\
    .getOrCreate() 
+
+schema = StructType([StructField("target", StringType()),
+                   StructField("_id", IntegerType()),
+                   StructField("date", StringType()),
+                   StructField("flag", StringType()),
+                   StructField("user", StringType()),
+                   StructField("text", StringType()),
+                  ])
