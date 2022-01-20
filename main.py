@@ -20,3 +20,8 @@ schema = StructType([StructField("target", StringType()),
                    StructField("user", StringType()),
                    StructField("text", StringType()),
                   ])
+path = "E:/scripts/training.1600000.processed.noemoticon.csv"
+
+df   = spark.read.format("csv")\
+                  .schema(schema)\
+                  .load(path)
